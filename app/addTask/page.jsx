@@ -6,6 +6,11 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+
+export const getStaticProps = async ()=>{
+
+}
+
 export default function AddTask() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -68,3 +73,4 @@ export default function AddTask() {
     </form>
   );
 }
+

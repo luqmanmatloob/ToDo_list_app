@@ -1,5 +1,6 @@
 // Edit topic
 
+
 import EditTaskForm from "@/components/EditTaskForm";
 
 
@@ -25,5 +26,5 @@ export default async function EditTask({ params }) {
   const { title, description } = task;
 
   return <EditTaskForm id={id} title={title} description={description} />;
+  
 }
-
