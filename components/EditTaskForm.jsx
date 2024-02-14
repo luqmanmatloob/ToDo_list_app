@@ -13,7 +13,7 @@ export default function EditTaskForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+      const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

@@ -22,7 +22,7 @@ export default function AddTask() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/tasks", {
+      const res = await fetch("https://todoapp-luqman.vercel.app/api/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

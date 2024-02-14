@@ -7,7 +7,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getTasks = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/tasks", {
+    const res = await fetch("https://todoapp-luqman.vercel.app/api/tasks", {
       cache: "no-store",
     });
 
