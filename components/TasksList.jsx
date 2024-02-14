@@ -22,7 +22,23 @@ const getTasks = async () => {
 };
 
 export default async function TaskcsList() {
-  const { tasks } = await getTasks();
+  // const { tasks } = await getTasks();
+
+
+
+  let tasks;
+
+  try {
+    const { tasks: fetchedTasks } = await getTasks();
+    tasks = fetchedTasks;
+  } catch (error) {
+    console.error("Error fetching tasks:", error);
+    // Assign some default value to tasks
+    tasks = [];
+  }
+
+
+
 
   return (
     <>
