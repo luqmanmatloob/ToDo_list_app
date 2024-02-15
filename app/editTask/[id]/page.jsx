@@ -6,7 +6,12 @@ import EditTaskForm from "@/components/EditTaskForm";
 
 const getTaskById = async (id) => {
   try {
-    const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+
+    // for deployment 
+    // const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+
+    // for local enviroment 
+    const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
       cache: "no-store",
     });
 

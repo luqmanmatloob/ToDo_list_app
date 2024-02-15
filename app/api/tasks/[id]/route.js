@@ -10,12 +10,50 @@ export async function PUT(request, { params }) {
   return NextResponse.json({ message: "Task updated" }, { status: 200 });
 }
 
-export async function GET(request, { params }) {
-  const { id } = params;
+
+
+export async function GET(request, { params } ) {
+
   await connectMongoDB();
-  const task = await Task.findOne({ _id: id });
-  return NextResponse.json({ task }, { status: 200 });
-}
+  const { userid } = params;
+  
+  console.log(`"user id ${userid}"`);
+  
+  // Find tasks with the sspecified userid
+  const tasks = await Task.find({ userid: userid });
+  console.log(`"tasks ${tasks}"`);
+  return NextResponse.json({ tasks }, { status: 200 });
+  
+  }
+// export async function GET(request, { params }) {
+//   const { id } = params;
+//   await connectMongoDB();
+//   const task = await Task.findOne({ _id: id });
+//   return NextResponse.json({ task }, { status: 200 });
+// }
+
+
+
+// export async function GET(request, { params } ) {
+//   await connectMongoDB();
+//   const { userid } = params;
+
+//   console.log(userid)
+
+//   // Find tasks with the specified userid
+//   const tasks = await Task.find({ userid });
+//   console.log(tasks)
+//   return NextResponse.json({ tasks }, { status: 200 });
+// }
+
+
+
+
+
+
+
+
+
 
 
 export async function DELETE(request, { params }) {
@@ -25,3 +63,6 @@ export async function DELETE(request, { params }) {
   await Task.findByIdAndDelete(id);
   return NextResponse.json({ message: "Task deleted" }, { status: 200 });
 }
+
+
+

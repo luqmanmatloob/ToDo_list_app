@@ -9,7 +9,12 @@ export default function RemoveBtn({ id }) {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+
+      // For procuctin
+      // const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+
+      // For local enviroment 
+      const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
         method: "DELETE",
       });
 
