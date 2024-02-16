@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import NextTopLoader from 'nextjs-toploader';
 import { Inter } from "next/font/google";
 require('dotenv').config();
 
@@ -15,6 +16,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-[#b8feff] ">
       <body className={inter.className}>
+      <NextTopLoader
+          color="#0000FF"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+        />
+
         <div className="max-w-3xl mx-auto p-4 bg-[#a7dcdd] shadow-xl m-5 rounded-lg">
 
           <Navbar />

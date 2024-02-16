@@ -16,7 +16,9 @@ export default function RemoveBtn({ id }) {
       // For local enviroment 
       // const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
         method: "DELETE",
-      });
+      }
+      
+      );
 
       if (res.ok) {
         router.refresh();
