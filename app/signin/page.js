@@ -54,7 +54,7 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="bg-[#a7dcdd] px-6 py-24 sm:py-32 lg:px-8">
+    <div className="bg-[#] px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sign In</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">Please enter E-mail and password to sign in.</p>
@@ -72,11 +72,11 @@ export default function SignUpForm() {
         </div>
         {errorMessage && <div className="text-red-500 mt-2">{errorMessage}</div>}
         <div className="mt-10">
-          <button type="submit" className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign In</button>
+          <button type="submit" className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign In</button>
         </div>
         <div className="mt-10 flex justify-center gap-5 items-center ">
           <p>Dont have an account?</p>
-          <Link href="/signup" className="block  rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign Up </Link>
+          <Link href="/signup" className="block  rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign Up </Link>
         </div>
       </form>
     </div>
