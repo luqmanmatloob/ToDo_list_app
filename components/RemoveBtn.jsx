@@ -11,10 +11,10 @@ export default function RemoveBtn({ id }) {
     if (confirmed) {
 
       // For procuctin
-      // const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+      const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
 
       // For local enviroment 
-      const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+      // const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
         method: "DELETE",
       });
 

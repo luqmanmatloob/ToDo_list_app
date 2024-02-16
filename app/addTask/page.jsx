@@ -109,7 +109,13 @@ console.log(userid)
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/tasks", {
+
+      // for development
+      // const res = await fetch("http://localhost:3000/api/tasks", {
+
+
+      // for production
+      const res = await fetch("https://todoapp-luqman.vercel.app//api/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

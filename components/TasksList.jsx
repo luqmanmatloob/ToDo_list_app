@@ -91,8 +91,9 @@ import Cookie from 'js-cookie';
 const getTasks = (id) => {
   console.log(id);
 
+
+// for production
   return fetch(`/api/tasks/${id}`, { // Update the URL to match your server-side endpoint
-  // return fetch(`/api/tasks?userId=${id}`, { // Update the URL to match your server-side endpoint
     cache: "no-store",
 
   })
