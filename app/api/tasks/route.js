@@ -11,8 +11,30 @@ export async function POST(request) {
 
  }
 
-export async function GET() {
+// export async function GET() {
+//   await connectMongoDB();
+//   const tasks = await Task.find();
+//   return NextResponse.json({ tasks });
+// }
+
+
+export async function GET(request) {
+
   await connectMongoDB();
-  const tasks = await Task.find();
-  return NextResponse.json({ tasks });
-}
+  // const { userid } = params;
+
+  const { query } = request;
+  const userid = query.userId;
+
+  
+  console.log(`"user id ${userid}"`);
+  
+  // Find tasks with the sspecified userid
+  const tasks = await Task.find({ userid: userid });
+ 
+ 
+  console.log(`"tasks ${tasks}"`);
+  return NextResponse.json({ tasks }, { status: 200 });
+  
+  }
+

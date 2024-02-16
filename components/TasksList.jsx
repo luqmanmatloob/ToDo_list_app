@@ -88,10 +88,13 @@ import RemoveBtn from "./RemoveBtn";
 import { HiPencilAlt } from "react-icons/hi";
 import Cookie from 'js-cookie';
 
-const getTasks = (userid) => {
-  console.log(userid);
-  return fetch(`/api/tasks/${userid}`, { // Update the URL to match your server-side endpoint
+const getTasks = (id) => {
+  console.log(id);
+
+  return fetch(`/api/tasks/${id}`, { // Update the URL to match your server-side endpoint
+  // return fetch(`/api/tasks?userId=${id}`, { // Update the URL to match your server-side endpoint
     cache: "no-store",
+
   })
   .then(res => {
     if (!res.ok) {
