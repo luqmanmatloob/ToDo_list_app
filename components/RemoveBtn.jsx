@@ -27,7 +27,7 @@ export default function RemoveBtn({ id }) {
   };
 
   return (
-    <button onClick={removeTask} className="text-black">
+    <button onClick={removeTask} className="">
       <HiOutlineTrash size={24} />
     </button>
   );

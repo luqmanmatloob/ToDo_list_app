@@ -51,11 +51,12 @@ export default function TaskList() {
   }, []);
 
   return (
-    <>
+    <div className="">
+    <div >
       {tasks.map((t) => (
         <div
           key={t._id}
-          className="p-4 my-3 flex justify-between gap-5 items-start rounded-md shadow-md mb-5"
+          className="p-4 my-3 flex justify-between gap-5 items-start rounded-md shadow-slate-500 shadow-sm mb-5"
         >
           <div>
             <h2 className="font-bold text-2xl">{t.title}</h2>
@@ -69,6 +70,7 @@ export default function TaskList() {
           </div>
         </div>
       ))}
-    </>
+    </div>
+    </div>
   );
 }

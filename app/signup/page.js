@@ -75,31 +75,31 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="bg-[#] px-6 py-24 sm:py-32 lg:px-8">
+    <div className="bg-[#] px-6 py-24 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sign Up</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">Please fill out the form to sign up.</p>
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Sign Up</h2>
+        <p className="mt-2 text-lg leading-8 text-white">Please fill out the form to sign up.</p>
       </div>
       <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-y-6">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-200">First name</label>
             <input type="text" id="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-200">Last name</label>
             <input type="text" id="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-200">Email</label>
             <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-semibold leading-6 text-gray-900">Password</label>
+            <label htmlFor="password" className="block text-sm font-semibold leading-6 text-gray-200">Password</label>
             <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <div>
-            <label htmlFor="confirm-password" className="block text-sm font-semibold leading-6 text-gray-900">Confirm Password</label>
+            <label htmlFor="confirm-password" className="block text-sm font-semibold leading-6 text-gray-200">Confirm Password</label>
             <input type="password" id="confirm-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>        </div>
         <div className="mt-10">

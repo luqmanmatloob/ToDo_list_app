@@ -41,7 +41,7 @@ export default function EditTaskForm({ id, title, description }) {
       <input
         onChange={(e) => setNewTitle(e.target.value)}
         value={newTitle}
-        className="border border-slate-500 px-8 py-2 rounded-md bg-[#c7fbfb]"
+        className="border border-slate-500 px-8 py-2 rounded-md bg-slate-700"
         type="text"
         placeholder="Task Title"
       />
@@ -49,7 +49,7 @@ export default function EditTaskForm({ id, title, description }) {
       <input
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
-        className="border border-slate-500 px-8 py-2 rounded-md bg-[#c7fbfb]"
+        className="border border-slate-500 px-8 py-2 rounded-md bg-slate-700"
         type="text"
         placeholder="Task Description"
       />

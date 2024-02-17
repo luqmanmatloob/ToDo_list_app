@@ -1,16 +1,5 @@
 
 
-// import TasksList from "@/components/TasksList";
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <TasksList />
-//     </div>
-//   )
-// }
-
-
 "use client"
 
 import { useState, useEffect } from 'react';
@@ -32,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className=''>
       {userid && <TasksList />}
     </div>
   );

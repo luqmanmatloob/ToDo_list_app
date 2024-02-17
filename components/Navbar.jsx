@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="shadow-md shadow-black flex justify-between items-center bg-[#2C2C54] px-8 rounded-md   py-5">
+    <nav className="shadow-md shadow-slate-700 flex justify-between items-center bg-slate-900 px-8 rounded-md   py-5">
       <Link className="text-white font-extrabold" href={"/"}>
         Todo List
       </Link>

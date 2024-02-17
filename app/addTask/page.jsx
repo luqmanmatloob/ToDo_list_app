@@ -21,7 +21,7 @@ console.log(userid)
     e.preventDefault();
 
     if (!title || !description || !userid) {
-      alert("Title, description, and user ID are required.");
+      alert("Title, Description, and Signin are required.");
       return;
     }
 
@@ -57,14 +57,14 @@ console.log(userid)
       <input
         onChange={(e) => setTitle(e.target.value)}
         value={title}
-        className="border border-slate-500 px-8 py-2 rounded-md bg-[#ffffff]"
+        className="border border-slate-500 px-8 py-2 rounded-md bg-slate-700"
         type="text"
         placeholder="Task Title"
       />
       <input
         onChange={(e) => setDescription(e.target.value)}
         value={description}
-        className="border border-slate-500 px-8 py-2 rounded-md bg-[#ffffff]"
+        className="border border-slate-500 px-8 py-2 rounded-md bg-slate-700"
         type="text"
         placeholder="Task Description"
       />
