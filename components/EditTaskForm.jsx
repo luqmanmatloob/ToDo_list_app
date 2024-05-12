@@ -6,18 +6,12 @@ import { useRouter } from "next/navigation";
 export default function EditTaskForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
-
   const router = useRouter();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // for local enviroment
-      // const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
-
-      // For production
-      const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+      const res = await fetch(`${process.env.URL}/api/tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

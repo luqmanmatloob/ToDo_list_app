@@ -1,16 +1,7 @@
-// Edit topic
-
-
 import EditTaskForm from "@/components/EditTaskForm";
-
-
 const getTaskById = async (id) => {
   try {
-    // for deployment 
-    const res = await fetch(`https://todoapp-luqman.vercel.app/api/edit/${id}`, {
-
-    // for local enviroment 
-    // const res = await fetch(`http://localhost:3000/api/edit/${id}`, {
+    const res = await fetch(`${process.env.URL}/api/edit/${id}`, {
       cache: "no-store",
     });
 

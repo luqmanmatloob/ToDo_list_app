@@ -1,7 +1,6 @@
 
 "use client";
 
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Cookie from 'js-cookie';
@@ -27,12 +26,8 @@ console.log(userid)
 
     try {
 
-      // for development
-      // const res = await fetch("http://localhost:3000/api/tasks", {
+      const res = await fetch('/api/tasks', {
 
-
-      // for production
-      const res = await fetch("https://todoapp-luqman.vercel.app//api/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
