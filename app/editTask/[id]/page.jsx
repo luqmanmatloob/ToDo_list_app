@@ -1,7 +1,7 @@
 import EditTaskForm from "@/components/EditTaskForm";
 const getTaskById = async (id) => {
   try {
-    const res = await fetch(`${process.env.URL}/api/edit/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/edit/${id}`, {
       cache: "no-store",
     });
 
